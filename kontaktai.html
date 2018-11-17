@@ -25,31 +25,24 @@
         <header>
             <h1>Kontaktai</h1>
         </header>
+        <hr>
+       <span>Zemelapis</span>
+        <hr>
+
 
         <form action="saugoti.php" method="post" target="_blank">
-            <label for="vardas">Tavo vardas</label>
-            <input type="text" name="firstName" id="vardas" />
-            <hr>
-            <select name="car" id="auto">
-                <option value="Tesla Model S">Tesla</option>
-                <option value="Nissan Leaf">Nissan Leaf</option>
-            </select>
-            <hr>
-            <label for="ar">Ar Kazkas?</label>
-            <input type="checkbox" value="taip" id="ar"/>
-            <hr>
-            <label for="pa">Pasirinkimas A</label>
-            <input type="radio" name="pasirinkimas" value="pasirinkimas A" id="pa"/>
-            <label for="pb">B</label>
-            <input type="radio" name="pasirinkimas" value="pasirinkimas B" id="pb"/>
-            <hr>
-            <textarea name="klausimas" placeholder="tavo tekstas">Labas Pasauli</textarea>
-            <hr>
+        <div class="grid-kontaktai">
+            <div class="grid-kon1">Vardas</div>
+            <div class="grid-kon2">Žinutė</div>
+            <div class="grid-kon3"><input type="text" name="firstName" id="vardas" style="width: 50%" /></div>
+            <div class="grid-kon4"><input type="text" name="jusuZinute" id="zinute" style="width: 100%"; /></div>
+            <div class="grid-kon5">El. paštas</div>
+            <div class="grid-kon6"></div>
+            <div class="grid-kon7"><input type="text" name="elPastas" id="pastas" style="width: 50%" /></div>
+            <div class="grid-kon8"></div>
+        </div>
             <button type="submit">Klausti</button>
         </form>
-
-
-        <hr/>
     </div>
 </main>
 <hr>
