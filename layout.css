@@ -1,0 +1,33 @@
+main{
+    width: 60%;
+    margin: auto;
+}
+
+footer{
+    width: 60%;
+    margin: auto;
+    display: inline;
+}
+
+img {
+    float: left;
+    margin-right: 10px;
+}
+
+i {
+    float: right;
+    margin-right: 20px;
+}
+
+.top img {
+    float: left;
+    margin-left: 10px;
+}
+
+footer img{
+    float: right;
+}
+
+footer span{
+    margin-left: 20px;
+}
