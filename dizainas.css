@@ -11,6 +11,15 @@ h1 {
     padding: 10px;
 }
 
+p {
+    text-align: justify;
+}
+
+#demo {
+    text-align: center;
+    font: lighter;
+}
+
 .bottom a{
     color: #3e5667;
     text-decoration: none;

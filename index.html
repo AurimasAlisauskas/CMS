@@ -32,10 +32,44 @@
     </div>
 </main>
 <hr>
+
+<div id="x">5</div>
+<span id="y">6</span>
+<div id="sum">?</div>
+
+<UL>
+    <li class="elementas">1</li>
+    <li class="elementas">2</li>
+    <li class="elementas">3</li>
+</UL>
+<div id="ul1"></div>
+
+<hr>
 <footer>
     <span>2018&copy; visos teises saugomos</span>
     <img src="img/logotipas.png" alt="logotipas" width="30" height="20"/>
 </footer>
 <hr>
+
+<script>
+    var x = document.getElementById("x").innerHTML;
+    var y = document.getElementById("y").innerHTML;
+    document.getElementById("sum").innerHTML = x + y;
+
+    var elementai = document.getElementsByClassName('elementas')
+
+    var sum = '';
+
+    for (var i =0; i<elementai.length; i++) {
+        var elemntas = elementai[i];
+        sum = sum + elemntas.innerHTML;
+    }
+
+    document.getElementById("ul1").innerHTML = sum;
+
+
+
+</script>
+
 </body>
 </html>
