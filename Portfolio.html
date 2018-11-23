@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="dizainas.css">
     <link rel="stylesheet" href="layout.css">
-    <script src="JStestas.js"></script>
 </head>
 <body>
 <hr>
@@ -55,5 +54,42 @@
     <img src="img/logotipas.png" alt="logotipas" width="30" height="20"/>
 </footer>
 <hr>
+
+<div class="item1">
+    <img src="img/off.jpg"
+         class="lempute false" style="height: 200px"
+    >
+
+    <hr>
+    <hr>
+
+    <div class="tab">
+        <button class="tablinks" onclick="kalba(event, 'C#')">C#</button>
+        <button class="tablinks" onclick="kalba(event, 'JAVA')">JAVA</button>
+        <button class="tablinks" onclick="kalba(event, 'WEB')">WEB</button>
+    </div>
+
+    <div id="C#" class="tabcontent">
+        <h3>C#</h3>
+        <p>programavimo kalba</p>
+        <img src="img/logo1.jpg">
+    </div>
+
+    <div id="JAVA" class="tabcontent">
+        <h3>JAVA</h3>
+        <p>Android appsu kurimo kalba</p>
+        <img src="img/mobile.jpg">
+    </div>
+
+    <div id="WEB" class="tabcontent">
+        <h3>WEB</h3>
+        <p>Front end programavimo kalba</p>
+        <img src="img/logo1.jpg">
+    </div>
+
+    <hr>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="JStestas.js"></script>
+    <script src="lightBulb.js"></script>
 </body>
 </html>
