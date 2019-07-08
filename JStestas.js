@@ -68,44 +68,44 @@ function dalinti() {
     rez = a / b;
     rodytiAtsakyma(rez);
 }
-
-var mas1 = [
-    {name: 'Ernestas', age: 42},
-    {name: 'Tomas', age: 28},
-    {name: 'Mantas', age: 12},
-    {name: 'Mantautas', age: 32},
-    {name: 'Lina', age: 25},
-    {name: 'Eimantas', age: 60},
-    {name: 'Tomas', age: 22},
-    {name: 'Vidmantas', age: 89},
-    {name: 'Aurimas', age: 24},
-    {name: 'Tautvydas', age: 53}
-];
-// mas1.add()
-console.log(mas1);
-mas1.forEach(function (i) {
-    console.log(i.name, i.age)
-});
-
-var spausdintiSarasa = function (kur, ka) {
-    kur.innerHTML += ka;
-};
-
-function formuotiSarasa(klase) {
-    var sarasas = '';
-
-    for (var i = 0; i < klase.length; i++) {
-        var asmuo = klase[i];
-        sarasas += "<br/>" + "Vardas: " + asmuo.name + ", Amzius: " + asmuo.age;
-    }
-    return sarasas;
-}
-
-var sarasas1 = formuotiSarasa(mas1, 'display2');
-
-var kur1 = document.getElementsByClassName('display2')[1];
-
-spausdintiSarasa(kur1, sarasas1);
+//
+// var mas1 = [
+//     {name: 'Ernestas', age: 42},
+//     {name: 'Tomas', age: 28},
+//     {name: 'Mantas', age: 12},
+//     {name: 'Mantautas', age: 32},
+//     {name: 'Lina', age: 25},
+//     {name: 'Eimantas', age: 60},
+//     {name: 'Tomas', age: 22},
+//     {name: 'Vidmantas', age: 89},
+//     {name: 'Aurimas', age: 24},
+//     {name: 'Tautvydas', age: 53}
+// ];
+// // mas1.add()
+// console.log(mas1);
+// mas1.forEach(function (i) {
+//     console.log(i.name, i.age)
+// });
+//
+// var spausdintiSarasa = function (kur, ka) {
+//     kur.innerHTML += ka;
+// };
+//
+// function formuotiSarasa(klase) {
+//     var sarasas = '';
+//
+//     for (var i = 0; i < klase.length; i++) {
+//         var asmuo = klase[i];
+//         sarasas += "<br/>" + "Vardas: " + asmuo.name + ", Amzius: " + asmuo.age;
+//     }
+//     return sarasas;
+// }
+//
+// var sarasas1 = formuotiSarasa(mas1, 'display2');
+//
+// var kur1 = document.getElementsByClassName('display2')[1];
+//
+// spausdintiSarasa(kur1, sarasas1);
 
 
 var state = false;
