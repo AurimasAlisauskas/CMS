@@ -1,5 +1,6 @@
 <?php  include "includes/db.php"; ?>
- <?php  include "includes/header.php"; ?>
+<?php  include "includes/header.php"; ?>
+<?php  include "admin/functions.php"; ?>
 
 <?php
 if (isset($_POST['submit'])){
@@ -7,39 +8,34 @@ if (isset($_POST['submit'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    if(!empty($username) && !empty($email) && !empty($password)){
+    if(username_exists($username)){
+        $message = "Username exists";
+    }
 
-    $username = mysqli_real_escape_string($connection, $username);
-    $email = mysqli_real_escape_string($connection, $email);
-    $password = mysqli_real_escape_string($connection, $password);
+        if(!empty($username) && !empty($email) && !empty($password)){
+
+        $username = mysqli_real_escape_string($connection, $username);
+        $email = mysqli_real_escape_string($connection, $email);
+        $password = mysqli_real_escape_string($connection, $password);
 
         $password = password_hash($password, PASSWORD_BCRYPT, array('cost' => 12));
 
-//    $query = "SELECT randSalt FROM users";
-//    $select_randsalt_query = mysqli_query($connection, $query);
-//    if(!$select_randsalt_query){
-//        die ("Query Failed" . mysqli_error($connection));
-//    }
-//
-//    $row = mysqli_fetch_array($select_randsalt_query);
-//    $salt = $row['randSalt'];
-//
-//    $password = crypt($password, $salt);
+        $query = "INSERT INTO users (username, user_email, user_password, user_role) VALUES ('{$username}', '{$email}', '{$password}', 'subscriber' )";
+        $register_user_query = mysqli_query ($connection, $query);
 
-    $query = "INSERT INTO users (username, user_email, user_password, user_role) VALUES ('{$username}', '{$email}', '{$password}', 'subscriber' )";
-    $register_user_query = mysqli_query ($connection, $query);
-    if (!$register_user_query){
-        die ("Query Failed" . mysqli_error($connection)) . ' ' . mysqli_errno($connection);
+        if (!$register_user_query){
+            die ("Query Failed" . mysqli_error($connection)) . ' ' . mysqli_errno($connection);
+        }
+
+            //$message = "User Created";
+
+        } else {
+            $message = "This fields cannot be empty";
+        }
+        } else {
+            $message = "";
     }
 
-    $message = "User Created";
-
-    } else {
-        $message = "This fields cannot be empty";
-    }
-} else {
-    $message = "";
-}
 ?>
 
 
